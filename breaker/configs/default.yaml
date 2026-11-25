@@ -1,0 +1,29 @@
+usd_path: ../../breaker.usd
+handle_path: /Breaker/handle
+joint_path: /Breaker/joints/handle_joint
+joint_name: handle_joint
+base_path: /Breaker/base
+case_name: all
+
+headless: true
+physics_dt: 0.0010416666666666667 # 1/960 s
+num_steps: 240
+initial_position_deg: 10.0
+initial_velocity_deg_s: 100.0
+joint_limit_deg: [-20.0, 20.0]
+
+gravity_enabled: true
+gravity: [0.0, 0.0, -9.81]
+spring:
+  stable_angle_deg: 30.0
+  peak_torque_nm: 0.0001
+  center_deg: 0.0
+damping_ratio: 0.2
+friction:
+  static_nm: 0.0
+  dynamic_nm: 0.0
+
+solver_method: rk4
+solver_max_step: 0.0001
+output_dir: runs
+
